@@ -1,0 +1,48 @@
+{
+	"env": {
+		"browser": true,
+		"node": true
+	},
+	"parserOptions": {
+		"ecmaVersion": 2021,
+		"sourceType": "module"
+	},
+	"extends": "eslint:recommended",
+	"rules": {
+		"max-len": ["error", 80],
+		"object-curly-spacing": ["error", "always"],
+
+		// enable additional rules
+		"indent": ["error", "tab"],
+		"linebreak-style": ["error", "unix"],
+		"semi": ["error", "always"],
+
+		"prefer-const": [
+			"error",
+			{
+				"destructuring": "any",
+				"ignoreReadBeforeAssign": false
+			}
+		],
+
+		"no-var": 2,
+		"no-eval": 2,
+		"no-implicit-coercion": 2,
+		"no-extra-semi": 2,
+		"no-redeclare": 2,
+		"no-const-assign": 2,
+		"no-constant-condition": 2,
+		"no-duplicate-imports": 2,
+		"no-else-return": ["error", { "allowElseIf": false }],
+
+		//Avoiding data coercion
+		"eqeqeq": ["error", "always"],
+
+		// override configuration set by extending "eslint:recommended"
+		"no-empty": "warn",
+		"no-cond-assign": ["error", "always"],
+
+		// disable rules from base configurations
+		"for-direction": "off"
+	}
+}
