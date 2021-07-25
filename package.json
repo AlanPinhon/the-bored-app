@@ -1,0 +1,20 @@
+{
+  "name": "age-prediction-app",
+  "version": "0.0.0",
+  "description": "An age predictor by only get your name :)",
+  "main": "index.js",
+  "scripts": {
+    "start": ""
+  },
+  "engines": {
+    "node": ">=15.0.0"
+  },
+  "author": "Alan Pinhon",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "esbuild": "^0.12.15",
+    "husky": "^7.0.1"
+  }
+}
