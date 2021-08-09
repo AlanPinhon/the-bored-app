@@ -6,7 +6,7 @@ Some plugins are required to follow some code guidelines that the project have c
 1. [Editor config](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 2. [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 
-After that, keep in mind the following points:
+### Usage
 
 - To install the project dependencies start the follow command: `npm install`
 
