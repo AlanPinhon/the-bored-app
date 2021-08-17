@@ -4,20 +4,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Age prediction app.</title>
+    <title>The Bored App.</title>
 		<link rel="stylesheet" href="bundle.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-		<h3>Hi there!</h3>
-		<p>Let's test some things</p>
-		<ul>
-			<li>
-				CSS: <span class="success">Ready!</span>
-			</li>
-			<li>
-				JavaScript: <span id="js-test"></span>
-			</li>
-		</ul>
+		<main>
+			<div class="container-title">
+				<h1 class="title">The Bored App</h1>
+				<h3 class="subtitle">Let's find you something to do</h3>
+			</div>
+			<div class="container">
+				<p class="paragraph">The Bored APP helps you find things to do when you're bored.</p>
+				<div class="activity-container">
+					<button type="submit" id="enviar" class="boton">Find activities</button>
+					<h4 class="copy">or</h4>
+					<select name="activity" id="activity-select" class="activity-select">
+						<option value="">Select an activity</option>
+						<option value="education">Education</option>
+						<option value="recreational">Recreational</option>
+						<option value="social">Social</option>
+						<option value="diy">Diy</option>
+						<option value="charity">Charity</option>
+						<option value="cooking">Cooking</option>
+						<option value="relaxation">Relaxation</option>
+						<option value="music">Music</option>
+						<option value="busywork">Busywork</option>
+					</select>
+				</div>
+				<div id="result"></div>
+			</div>
+			</section>
+		</main>
 		<script src="bundle.js"></script>
 	</body>
 </html>

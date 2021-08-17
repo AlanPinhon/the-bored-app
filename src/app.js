@@ -1,10 +1,7 @@
 //Loading styles
+import { btnEvent } from './js/consultAPI';
 import './styles/app.scss';
 
-//Firing our whole app
-const app = () => {
-	const jsTestElement = document.getElementById('js-test');
-	jsTestElement.classList.add('success');
-	jsTestElement.innerText = 'Ready!';
+window.onload = () => {
+	btnEvent();
 };
-app();
