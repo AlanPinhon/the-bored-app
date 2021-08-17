@@ -38,8 +38,9 @@
 
 	.activity-container{
 		display: flex;
-		width: 320px;
+		width: 470px;
 		justify-content: space-between;
+		align-items: center;
 	}
 
 	.result{
@@ -88,5 +89,30 @@
 		&:focus{
 			outline: none;
 		}
+	}
+}
+
+@media screen and (max-width:550px){
+	.container .activity-container{
+		width: 90%;
+	}
+}
+
+@media screen and (max-width:480px){
+	.container{
+		.activity-container{
+			flex-direction: column;
+		}
+
+		.result{
+			width: 85%;
+		}
+
+		.boton,
+		.copy,
+		.activity-select{
+			margin: 10px 0;
+		}
+
 	}
 }

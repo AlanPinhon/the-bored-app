@@ -1,46 +1,27 @@
 import { useBoredAPI } from "./api";
-import { removeChild } from "./removeChild";
-
+import { showActivity } from "./showActivity";
 
 const btnEnviar = document.querySelector('#enviar');
-const resultado = document.querySelector('#result');
+const actSelect = document.querySelector('#activity-select');
 
 const consultAPI = async () => {
-	const data = await useBoredAPI();
-	console.log(data);
-	const { activity , participants , type } = data;
+	const type = sessionStorage.getItem('typeFilter');
+	const data = await useBoredAPI(type);
 
 	if(data){
-		removeChild();
-		resultado.classList.add('result');
-
-
-		const alert = document.createElement('p');
-		alert.classList.add('alert');
-		alert.textContent = 'This activity may interest you!';
-		resultado.appendChild(alert);
-
-		const actividad = document.createElement('p');
-		actividad.classList.add('show-activity');
-		actividad.textContent = `Activity: ${activity}`;
-		resultado.appendChild(actividad);
-
-		const participantes = document.createElement('p');
-		participantes.classList.add('show-activity');
-		participantes.textContent = `Participants: ${participants}`;
-		resultado.appendChild(participantes);
-
-		const tipo = document.createElement('p');
-		tipo.classList.add('show-activity');
-		tipo.textContent = `Type: ${type}`;
-		resultado.appendChild(tipo);
+		showActivity(data);
 	}
 };
 
-const btnEvent = () => {
+const leerValor = e => {
+	sessionStorage.setItem('typeFilter' , e.target.value);
+};
+
+const events = () => {
 	btnEnviar.addEventListener('click', consultAPI);
+	actSelect.addEventListener('input', leerValor);
 };
 
 export{
-	btnEvent
+	events
 };
