@@ -1,5 +1,5 @@
 const useBoredAPI = async (type) => {
-	const  baseURL = new URL (`http://www.boredapi.com/api/activity/`);
+	const  baseURL = new URL (`https://www.boredapi.com/api/activity/`);
 
 	if(type){
 		baseURL.search = new URLSearchParams({ type });
